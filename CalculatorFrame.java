@@ -113,14 +113,14 @@ public class CalculatorFrame extends JFrame implements ActionListener{
 
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        contentPane.setLayout(new BorderLayout(0, 0));
-        contentPane.setBackground(Color.blue);
+        contentPane.setLayout(new BorderLayout(5, 10));
+        contentPane.setBackground(Color.lightGray);
         setContentPane(contentPane);
 
 
         // frame component
         jMaster = new JPanel();
-
+        jMaster.setBackground(Color.lightGray);
 //        JPanel jPLButtons = new JPanel();
 //        jPLButtons.setLayout(new GridLayout(6, 5));
 //
@@ -176,8 +176,9 @@ public class CalculatorFrame extends JFrame implements ActionListener{
         //      Setting all Numbered JButton's to Blue. The rest to Red
         for (int i = 0; i < JbnButtons.length; i++) {
             JbnButtons[i].setFont(f12);
-            if (i < 10)
-                JbnButtons[i].setForeground(Color.blue);
+            if (i < 10){
+                JbnButtons[i].setForeground(Color.white);
+            JbnButtons[i].setBackground(Color.darkGray);}
             else
                 JbnButtons[i].setForeground(Color.red);
         }
